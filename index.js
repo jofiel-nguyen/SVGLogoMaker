@@ -1,7 +1,7 @@
 import inquirer from 'inquirer';
 import fs from 'fs';
-import { Circle, Triangle, Square, Rectangle, createShape } from './lib/shapes.js';
-
+import * as Shapes from './lib/shapes.cjs';
+import { createShape } from './lib/shapes.cjs';
 import open from 'open';
 
 inquirer
