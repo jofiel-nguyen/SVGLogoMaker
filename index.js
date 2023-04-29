@@ -52,17 +52,10 @@ inquirer
 
   .then(answers => {
     // Create the shape object
-    const shape = createShape(answers.shape, answers.shapeColor, answers.textColor);
+    const shape = createShape(answers.shape, answers.shapeColor, answers.textColor,answers.text);
 
-    const svgCode = `
-    <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-      <rect width="100%" height="100%" fill="${answers.textColor}" />
-      ${shape.draw(answers.shapeSize)}
-      <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="60" fill="${answers.textColor}">${answers.text}</text>
-    </svg>
-  `;
   
-  fs.writeFileSync('./examples/logo.svg', svgCode);
+  fs.writeFileSync('./examples/logo.svg', shape.draw());
 
   console.log('Generated logo.svg');
   open('logo.svg');
