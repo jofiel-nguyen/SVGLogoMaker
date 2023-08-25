@@ -1,4 +1,4 @@
-# 10 Object-oriented Programming: SVG Logo Maker
+### SVG Logo Maker
 
 ### User Story
 
